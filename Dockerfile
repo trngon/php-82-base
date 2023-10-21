@@ -31,10 +31,8 @@ COPY ./docker/production/nginx/nginx.conf /etc/nginx/
 COPY ./docker/production/php/conf.d/* /usr/local/etc/php/conf.d/
 COPY ./docker/production/php/php-fpm.d/* /usr/local/etc/php-fpm.d/
 COPY docker/supervisord.conf /etc/supervisord.conf
-COPY docker/entrypoint.sh /
 COPY docker/cmd.sh /
 
-RUN chmod +x /entrypoint.sh
 EXPOSE 80
 #EXPOSE 9000
 
