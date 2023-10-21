@@ -29,5 +29,5 @@ jobs:
         ECR_REPOSITORY: ${{ env.ECR_REPOSITORY }}
         IMAGE_TAG: latest
       run: |
-        docker build --build-arg --no-cache -t public.ecr.aws/t8g1z8m9/php-82-base:latest .
+        docker build --build-arg -t public.ecr.aws/t8g1z8m9/php-82-base:latest .
         docker push public.ecr.aws/t8g1z8m9/php-82-base:latest
