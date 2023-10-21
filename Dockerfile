@@ -21,11 +21,6 @@ RUN pecl install redis mysqli && \
 RUN git config --global user.email "ngon@ngon.info"
 RUN git config --global user.name "Tran Trung Ngon"
 
-RUN php -r "readfile('http://getcomposer.org/installer');" | php -- --install-dir=/usr/bin/ --filename=composer
-
-RUN curl -1sLf 'https://dl.cloudsmith.io/public/symfony/stable/setup.alpine.sh' | bash
-RUN apk add symfony-cli
-
 ENV LANG C.UTF-8
 
 # Set which kind of environment we want to use (can be setup in BUILD time)
